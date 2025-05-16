@@ -1,14 +1,14 @@
 % init Script for initializing the driving scenario and getting actor ID
 
 % load scenario
-scenario = scenarioFromDesigner();
+scenario = scenarioFromDesigner(20);
 
 % assign to base workspace
 assignin('base', 'scenario', scenario);
 
 % getting ActorID
 actorName = 'Car1';
-actorID = -1;
+actorID = -1; 
 
 for i = 1:length(scenario.Actors)
     if strcmp(scenario.Actors(i).Name, actorName)
