@@ -13,9 +13,9 @@ colors = lines(numel(speeds));
 for i = 1:numel(speeds)
     speed = speeds(i);
 
-    scenario = intelligentintersection_speedtest_radar('car', speed);
+    scenario = intelligentintersection_speedtest_radar('truck', speed);
 
-    simOut = sim('intIntersection.slx');
+    simOut = sim('intIntersection_speed');
 
     scopeData = simOut.get('scopeData');
 
